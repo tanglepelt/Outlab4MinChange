@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  *Brittany Couts, Gabby Strong, Brock
  *4/20/2018
@@ -5,6 +6,8 @@
  *This is the tester
 */
 
+=======
+>>>>>>> 6b0128955bbb90113c76c4fb794bccf7d5c0ebb6
 import minchange.outlab4.CoinChanging;
 import org.junit.Assert;
 import org.junit.Test;
