@@ -1,10 +1,3 @@
-/*
- *Brittany Couts, Gabby Strong, Brock
- *4/20/2018
- *
- *This is the tester
-*/
-
 import minchange.outlab4.CoinChanging;
 import org.junit.Assert;
 import org.junit.Test;
