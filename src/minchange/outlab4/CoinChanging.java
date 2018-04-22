@@ -72,20 +72,25 @@ public class CoinChanging
 
     public static int[] run(int[] coins,int total)
     {
-        //CoinChanging cc = new CoinChanging();
+        CoinChanging cc = new CoinChanging();
 
-        //cc.printCoinChangingSolution(total, coins);
+        cc.printCoinChangingSolution(total, coins);
         System.out.print("test"+Arrays.toString(smallest));
+        
+        if(coins.length == 0)
+        {
+            return null;
+        }
         
         return smallest;
     }
     
-    /*  //tester to be removed
+    /*    //tester to be removed
     public static void main(String args[])
     {
     CoinChanging cc = new CoinChanging();
     int total = 42;
-    int coins[] = {1,5,10,25};
+    int coins[] = {25,10,5,1};
     cc.printCoinChangingSolution(total, coins);
     System.out.print("test"+Arrays.toString(smallest));
     }*/
