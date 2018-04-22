@@ -1,16 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ *Brittany Couts, Gabby Strong, Brock
+ *4/20/2018
+ *
+ *This is the tester
+*/
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import minchange.outlab4.CoinChanging;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 
 public class JUnitRun 
@@ -20,7 +17,7 @@ public class JUnitRun
     @Test
     public void test1()
     {
-        int[] expected = {25,10,5,1,1};
+        int[] expected = {1,1,5,10,25};
         
         int coins = 42;
         Assert.assertArrayEquals(expected,CoinChanging.run(UScoins,coins));

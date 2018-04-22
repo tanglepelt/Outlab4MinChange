@@ -85,7 +85,6 @@ public class CoinChanging
         return smallest;
     }
     
-    /*  //tester to be removed
     /*    //tester to be removed
     public static void main(String args[])
     {
