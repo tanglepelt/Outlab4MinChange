@@ -64,7 +64,6 @@ public class CoinChanging
                 smallest = values;
             }
                     
-            //System.out.println(Arrays.toString(smallest)); 
         }
         
         
@@ -75,25 +74,24 @@ public class CoinChanging
         CoinChanging cc = new CoinChanging();
 
         cc.printCoinChangingSolution(total, coins);
-        System.out.print("test"+Arrays.toString(smallest));
+        System.out.println(Arrays.toString(smallest));
         
+        //checking for an empty array
         if(coins.length == 0)
         {
+            System.out.println("\nEntered an Empty array");
+            return null;
+        }
+        //checkin for coin value of 0
+        if(total == 0)
+        {
+            System.out.println("\nCoin value can not be 0");
             return null;
         }
         
         return smallest;
     }
     
-    /*    //tester to be removed
-    public static void main(String args[])
-    {
-    CoinChanging cc = new CoinChanging();
-    int total = 42;
-    int coins[] = {25,10,5,1};
-    cc.printCoinChangingSolution(total, coins);
-    System.out.print("test"+Arrays.toString(smallest));
-    }*/
 
 }
 
