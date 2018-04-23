@@ -8,6 +8,7 @@
 
 import minchange.outlab4.CoinChanging;
 import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
@@ -70,3 +71,4 @@ public class JUnitRun
         Assert.assertArrayEquals(null,CoinChanging.run(array,coins));
     }
 }
+

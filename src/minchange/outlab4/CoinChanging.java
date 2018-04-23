@@ -88,6 +88,12 @@ public class CoinChanging
             System.out.println("\nCoin value can not be 0");
             return null;
         }
+        System.out.print("test"+Arrays.toString(smallest));
+        
+        if(coins.length == 0)
+        {
+            return null;
+        }
         
         return smallest;
     }
