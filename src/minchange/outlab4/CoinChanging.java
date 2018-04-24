@@ -52,7 +52,8 @@ public class CoinChanging
             }
         }
     }
-
+    
+    //readjusting parameters for the values 
     private static void getSmall(int[] values)
     {
         if(values.length > 0)
