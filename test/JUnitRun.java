@@ -1,4 +1,3 @@
-
 /*
  *Brittany Couts, Gabby Strong, Brock Lehnen
  *4/20/2018
@@ -8,20 +7,22 @@
 
 import minchange.outlab4.CoinChanging;
 import org.junit.Assert;
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
 public class JUnitRun 
 { 
+    //second array needed since first couldn't have a problem like this happening
+    int[] UScoins2 = { 1, 5, 12, 25 };
     int[] UScoins = { 1, 5, 10, 25 };
-    //test one test coins 42
+    
+       //testing against Greedy Algorithm output which is {1,1,1,1,12} 
     @Test //(expected = IllegalArgumentException.class)
     public void test1()
     {
-        int[] expected = {1,1,5,10,25};
-        int coins = 42;
-        Assert.assertArrayEquals(expected,CoinChanging.run(UScoins,coins));
+        int[] expected = {1,5,5,5};
+        int coins = 16;
+        Assert.assertArrayEquals(expected,CoinChanging.run(UScoins2,coins));
     }
     //test with 50 cents
     @Test //(expected = IllegalArgumentException.class)
@@ -55,6 +56,7 @@ public class JUnitRun
         int coins = 1016;
         Assert.assertArrayEquals(expected,CoinChanging.run(UScoins,coins));
     }
+ 
     @Test//(expected = IllegalArgumentException.class)
     public void NoCoins()
     {
@@ -69,16 +71,8 @@ public class JUnitRun
         int coins = 10;
         Assert.assertArrayEquals(null,CoinChanging.run(array,coins));
     }
-    //testing against Greedy Algorithm output which is {1,1,1,1,12} 
-    //second array needed since first couldn't have a problem like this happening
-    int[] UScoins2 = { 1, 5, 12, 25 };
-    //test of 16
-    @Test //(expected = IllegalArgumentException.class)
-    public void GreedyTest()
-    {
-        int[] expected = {1,5,5,5};
-        int coins = 16;
-        Assert.assertArrayEquals(expected,CoinChanging.run(UScoins2,coins));
-    }
+
+
 }
+
 
