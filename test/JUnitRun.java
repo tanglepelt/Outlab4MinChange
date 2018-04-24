@@ -1,6 +1,6 @@
 
 /*
- *Brittany Couts, Gabby Strong, Brock
+ *Brittany Couts, Gabby Strong, Brock Lehnen
  *4/20/2018
  *
  *This is the tester
