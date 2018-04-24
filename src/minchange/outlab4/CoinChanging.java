@@ -1,8 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ *Brittany Couts, Gabby Strong, Brock Lehnen
+ *4/20/2018
+ *
+ *This is the logic that runs the code
+*/
 package minchange.outlab4;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class CoinChanging 
 {
-    private static int smallNum = 100;
+    private static int smallNum = 10000;
     private static int[] smallest;
     //calls the method
     public void printCoinChangingSolution(int total,int coins[])
@@ -46,9 +47,6 @@ public class CoinChanging
                 result.add(coins[i]);
                 printActualSolution(result,total-coins[i],coins,i);
                 result.remove(result.size()-1);
-                
-                //System.out.println(result);
-     
             }
         }
     }
@@ -58,24 +56,19 @@ public class CoinChanging
     {
         if(values.length > 0)
         {
+            //checking for a smaller length of coins
             if(values.length < smallNum)
             {
                 //System.out.println("test");
                 smallNum = values.length;
                 smallest = values;
-            }
-                    
-        }
-        
-        
+            }           
+        }         
     }
 
     public static int[] run(int[] coins,int total)
     {
         CoinChanging cc = new CoinChanging();
-
-        cc.printCoinChangingSolution(total, coins);
-        System.out.println(Arrays.toString(smallest));
         
         //checking for an empty array
         if(coins.length == 0)
@@ -89,16 +82,15 @@ public class CoinChanging
             System.out.println("\nCoin value can not be 0");
             return null;
         }
-        System.out.print("test"+Arrays.toString(smallest));
         
-        if(coins.length == 0)
-        {
-            return null;
-        }
+        cc.printCoinChangingSolution(total, coins);
+        System.out.println(Arrays.toString(smallest));
         
         return smallest;
     }
     
 
 }
+
+
 
