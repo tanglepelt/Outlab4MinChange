@@ -38,8 +38,7 @@ public class JUnitRun
         int[] expected = {5};
         int coins = 5;
         Assert.assertArrayEquals(expected,CoinChanging.run(UScoins,coins));
-    }
-   
+    }  
     // test 112 coin
     @Test //(expected = IllegalArgumentException.class)
     public void bigCoinTest()
@@ -63,12 +62,23 @@ public class JUnitRun
         Assert.assertArrayEquals(null,CoinChanging.run(UScoins,coins));
     }
     //testing empty array
-     @Test//(expected = IllegalArgumentException.class)
+    @Test//(expected = IllegalArgumentException.class)
     public void EmptyArray()
     {
         int array[] = {};
         int coins = 10;
         Assert.assertArrayEquals(null,CoinChanging.run(array,coins));
+    }
+    //testing against Greedy Algorithm output which is {1,1,1,1,12} 
+    //second array needed since first couldn't have a problem like this happening
+    int[] UScoins2 = { 1, 5, 12, 25 };
+    //test of 16
+    @Test //(expected = IllegalArgumentException.class)
+    public void GreedyTest()
+    {
+        int[] expected = {1,5,5,5};
+        int coins = 16;
+        Assert.assertArrayEquals(expected,CoinChanging.run(UScoins2,coins));
     }
 }
 
